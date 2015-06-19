@@ -28,9 +28,9 @@
     [super viewDidLoad];
     [self prepare];
     request = [[IMRequest alloc] init];
-    IMProperty *property = [[IMProperty alloc] initWithPropertyID:@"02a34120a4e347ad82dee6b3ea34beba"];
+    IMProperty *property = [[IMProperty alloc] initWithPropertyID:@"YOUR_PROPERTY_ID"];
     IMImpression *impression = [[IMImpression alloc] initWithSlot:[[IMSlot alloc] initWithAdSize:15 pos:nil]];
-    IMDevice *device = [[IMDevice alloc] initWithCarrierIP:@"87.84.221.50"];
+    IMDevice *device = [[IMDevice alloc] initWithCarrierIP:@"YOUR_CARRIER_IP"];
     request.property = property;
     request.device = device;
     request.impression = impression;
