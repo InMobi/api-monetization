@@ -1,0 +1,6 @@
+docs
+.idea
+source
+*.pyc
+*.pyo
+

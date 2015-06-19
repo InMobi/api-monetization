@@ -1,0 +1,623 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E39650901ACC0A2E0090BCDF /* IMAdOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E396508A1ACC0A2E0090BCDF /* IMAdOperation.m */; };
+		E39650911ACC0A2E0090BCDF /* IMNativeAdData.m in Sources */ = {isa = PBXBuildFile; fileRef = E396508D1ACC0A2E0090BCDF /* IMNativeAdData.m */; };
+		E39650921ACC0A2E0090BCDF /* IMNativeQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = E396508F1ACC0A2E0090BCDF /* IMNativeQueue.m */; };
+		E3B718291ABAFAF9002F63BF /* IM_AdsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B718251ABAFAF9002F63BF /* IM_AdsTest.m */; };
+		E3B7182A1ABAFAF9002F63BF /* IM_RequestTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B718261ABAFAF9002F63BF /* IM_RequestTest.m */; };
+		E3B7182B1ABAFAF9002F63BF /* IM_ResponseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B718271ABAFAF9002F63BF /* IM_ResponseTest.m */; };
+		E3B7182C1ABAFAF9002F63BF /* IM_UtilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B718281ABAFAF9002F63BF /* IM_UtilTest.m */; };
+		E3EC5E2A1AB7103A00FDF782 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5E291AB7103A00FDF782 /* main.m */; };
+		E3EC5E2D1AB7103A00FDF782 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5E2C1AB7103A00FDF782 /* AppDelegate.m */; };
+		E3EC5E301AB7103A00FDF782 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5E2F1AB7103A00FDF782 /* ViewController.m */; };
+		E3EC5E331AB7103A00FDF782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3EC5E311AB7103A00FDF782 /* Main.storyboard */; };
+		E3EC5E351AB7103A00FDF782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3EC5E341AB7103A00FDF782 /* Images.xcassets */; };
+		E3EC5E381AB7103A00FDF782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3EC5E361AB7103A00FDF782 /* LaunchScreen.xib */; };
+		E3EC5E441AB7103A00FDF782 /* IM_NetworkTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5E431AB7103A00FDF782 /* IM_NetworkTest.m */; };
+		E3EC5E7D1AB711E000FDF782 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5E711AB711E000FDF782 /* BannerView.m */; };
+		E3EC5E8F1AB72EF500FDF782 /* IMBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5E8A1AB72EF500FDF782 /* IMBanner.m */; };
+		E3EC5E901AB72EF500FDF782 /* IMInterstitial.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5E8C1AB72EF500FDF782 /* IMInterstitial.m */; };
+		E3EC5E911AB72EF500FDF782 /* IMNative.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5E8E1AB72EF500FDF782 /* IMNative.m */; };
+		E3EC5E9B1AB72F2A00FDF782 /* IMRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5E981AB72F2A00FDF782 /* IMRequest.m */; };
+		E3EC5E9C1AB72F2A00FDF782 /* IMRequestStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5E9A1AB72F2A00FDF782 /* IMRequestStubs.m */; };
+		E3EC5E9F1AB72F3300FDF782 /* IMRequestResponseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5E9E1AB72F3300FDF782 /* IMRequestResponseManager.m */; };
+		E3EC5EA21AB72F3D00FDF782 /* GTMBase64Private.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5EA11AB72F3D00FDF782 /* GTMBase64Private.m */; };
+		E3EC5EA51AB7339100FDF782 /* IMJSONPayloadCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5EA41AB7339100FDF782 /* IMJSONPayloadCreator.m */; };
+		E3EC5EA81AB7397600FDF782 /* IMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5EA71AB7397600FDF782 /* IMUtils.m */; };
+		E3EC5EAB1AB73B1000FDF782 /* IMResponseStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5EAA1AB73B1000FDF782 /* IMResponseStubs.m */; };
+		E3EC5EAF1AB73D7200FDF782 /* IMBannerResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5EAE1AB73D7200FDF782 /* IMBannerResponseParser.m */; };
+		E3EC5EB21AB73D8100FDF782 /* IMNativeResponseParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5EB11AB73D8100FDF782 /* IMNativeResponseParser.m */; };
+		E3EC5EB51AB742EE00FDF782 /* IMAdFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5EB41AB742EE00FDF782 /* IMAdFormat.m */; };
+		E3EC5EB81AB747C200FDF782 /* IMError.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5EB71AB747C200FDF782 /* IMError.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E3EC5E3E1AB7103A00FDF782 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3EC5E1C1AB7103900FDF782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3EC5E231AB7103900FDF782;
+			remoteInfo = "InMobiAPIMonetization-Sample";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E39650891ACC0A2E0090BCDF /* IMAdOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMAdOperation.h; path = native_ad_imp_click/IMAdOperation.h; sourceTree = "<group>"; };
+		E396508A1ACC0A2E0090BCDF /* IMAdOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMAdOperation.m; path = native_ad_imp_click/IMAdOperation.m; sourceTree = "<group>"; };
+		E396508B1ACC0A2E0090BCDF /* IMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMConstants.h; path = native_ad_imp_click/IMConstants.h; sourceTree = "<group>"; };
+		E396508C1ACC0A2E0090BCDF /* IMNativeAdData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMNativeAdData.h; path = native_ad_imp_click/IMNativeAdData.h; sourceTree = "<group>"; };
+		E396508D1ACC0A2E0090BCDF /* IMNativeAdData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMNativeAdData.m; path = native_ad_imp_click/IMNativeAdData.m; sourceTree = "<group>"; };
+		E396508E1ACC0A2E0090BCDF /* IMNativeQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMNativeQueue.h; path = native_ad_imp_click/IMNativeQueue.h; sourceTree = "<group>"; };
+		E396508F1ACC0A2E0090BCDF /* IMNativeQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMNativeQueue.m; path = native_ad_imp_click/IMNativeQueue.m; sourceTree = "<group>"; };
+		E3B718251ABAFAF9002F63BF /* IM_AdsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IM_AdsTest.m; sourceTree = "<group>"; };
+		E3B718261ABAFAF9002F63BF /* IM_RequestTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IM_RequestTest.m; sourceTree = "<group>"; };
+		E3B718271ABAFAF9002F63BF /* IM_ResponseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IM_ResponseTest.m; sourceTree = "<group>"; };
+		E3B718281ABAFAF9002F63BF /* IM_UtilTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IM_UtilTest.m; sourceTree = "<group>"; };
+		E3EC5E241AB7103900FDF782 /* InMobiAPIMonetization-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InMobiAPIMonetization-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3EC5E281AB7103A00FDF782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3EC5E291AB7103A00FDF782 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E3EC5E2B1AB7103A00FDF782 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E3EC5E2C1AB7103A00FDF782 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E3EC5E2E1AB7103A00FDF782 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E3EC5E2F1AB7103A00FDF782 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E3EC5E321AB7103A00FDF782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E3EC5E341AB7103A00FDF782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E3EC5E371AB7103A00FDF782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E3EC5E3D1AB7103A00FDF782 /* InMobiAPIMonetization-SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InMobiAPIMonetization-SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3EC5E421AB7103A00FDF782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3EC5E431AB7103A00FDF782 /* IM_NetworkTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IM_NetworkTest.m; sourceTree = "<group>"; };
+		E3EC5E701AB711E000FDF782 /* BannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BannerView.h; path = "InMobi classes/BannerView.h"; sourceTree = "<group>"; };
+		E3EC5E711AB711E000FDF782 /* BannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BannerView.m; path = "InMobi classes/BannerView.m"; sourceTree = "<group>"; };
+		E3EC5E891AB72EF500FDF782 /* IMBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMBanner.h; path = "InMobi classes/IMBanner.h"; sourceTree = "<group>"; };
+		E3EC5E8A1AB72EF500FDF782 /* IMBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMBanner.m; path = "InMobi classes/IMBanner.m"; sourceTree = "<group>"; };
+		E3EC5E8B1AB72EF500FDF782 /* IMInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMInterstitial.h; path = "InMobi classes/IMInterstitial.h"; sourceTree = "<group>"; };
+		E3EC5E8C1AB72EF500FDF782 /* IMInterstitial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMInterstitial.m; path = "InMobi classes/IMInterstitial.m"; sourceTree = "<group>"; };
+		E3EC5E8D1AB72EF500FDF782 /* IMNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMNative.h; path = "InMobi classes/IMNative.h"; sourceTree = "<group>"; };
+		E3EC5E8E1AB72EF500FDF782 /* IMNative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMNative.m; path = "InMobi classes/IMNative.m"; sourceTree = "<group>"; };
+		E3EC5E971AB72F2A00FDF782 /* IMRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMRequest.h; path = "InMobi classes/IMRequest.h"; sourceTree = "<group>"; };
+		E3EC5E981AB72F2A00FDF782 /* IMRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMRequest.m; path = "InMobi classes/IMRequest.m"; sourceTree = "<group>"; };
+		E3EC5E991AB72F2A00FDF782 /* IMRequestStubs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMRequestStubs.h; path = "InMobi classes/IMRequestStubs.h"; sourceTree = "<group>"; };
+		E3EC5E9A1AB72F2A00FDF782 /* IMRequestStubs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMRequestStubs.m; path = "InMobi classes/IMRequestStubs.m"; sourceTree = "<group>"; };
+		E3EC5E9D1AB72F3300FDF782 /* IMRequestResponseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMRequestResponseManager.h; path = "InMobi classes/IMRequestResponseManager.h"; sourceTree = "<group>"; };
+		E3EC5E9E1AB72F3300FDF782 /* IMRequestResponseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMRequestResponseManager.m; path = "InMobi classes/IMRequestResponseManager.m"; sourceTree = "<group>"; };
+		E3EC5EA01AB72F3D00FDF782 /* GTMBase64Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMBase64Private.h; path = "InMobi classes/GTMBase64Private.h"; sourceTree = "<group>"; };
+		E3EC5EA11AB72F3D00FDF782 /* GTMBase64Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMBase64Private.m; path = "InMobi classes/GTMBase64Private.m"; sourceTree = "<group>"; };
+		E3EC5EA31AB7339100FDF782 /* IMJSONPayloadCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMJSONPayloadCreator.h; path = "InMobi classes/IMJSONPayloadCreator.h"; sourceTree = "<group>"; };
+		E3EC5EA41AB7339100FDF782 /* IMJSONPayloadCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMJSONPayloadCreator.m; path = "InMobi classes/IMJSONPayloadCreator.m"; sourceTree = "<group>"; };
+		E3EC5EA61AB7397600FDF782 /* IMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMUtils.h; path = "InMobi classes/IMUtils.h"; sourceTree = "<group>"; };
+		E3EC5EA71AB7397600FDF782 /* IMUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMUtils.m; path = "InMobi classes/IMUtils.m"; sourceTree = "<group>"; };
+		E3EC5EA91AB73B1000FDF782 /* IMResponseStubs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMResponseStubs.h; path = "InMobi classes/IMResponseStubs.h"; sourceTree = "<group>"; };
+		E3EC5EAA1AB73B1000FDF782 /* IMResponseStubs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMResponseStubs.m; path = "InMobi classes/IMResponseStubs.m"; sourceTree = "<group>"; };
+		E3EC5EAC1AB73B6200FDF782 /* IMValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IMValidator.h; path = "InMobi classes/IMValidator.h"; sourceTree = "<group>"; };
+		E3EC5EAD1AB73D7200FDF782 /* IMBannerResponseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMBannerResponseParser.h; path = "InMobi classes/IMBannerResponseParser.h"; sourceTree = "<group>"; };
+		E3EC5EAE1AB73D7200FDF782 /* IMBannerResponseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMBannerResponseParser.m; path = "InMobi classes/IMBannerResponseParser.m"; sourceTree = "<group>"; };
+		E3EC5EB01AB73D8100FDF782 /* IMNativeResponseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMNativeResponseParser.h; path = "InMobi classes/IMNativeResponseParser.h"; sourceTree = "<group>"; };
+		E3EC5EB11AB73D8100FDF782 /* IMNativeResponseParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMNativeResponseParser.m; path = "InMobi classes/IMNativeResponseParser.m"; sourceTree = "<group>"; };
+		E3EC5EB31AB742EE00FDF782 /* IMAdFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAdFormat.h; sourceTree = "<group>"; };
+		E3EC5EB41AB742EE00FDF782 /* IMAdFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAdFormat.m; sourceTree = "<group>"; };
+		E3EC5EB61AB747C200FDF782 /* IMError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMError.h; sourceTree = "<group>"; };
+		E3EC5EB71AB747C200FDF782 /* IMError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMError.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E3EC5E211AB7103900FDF782 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3EC5E3A1AB7103A00FDF782 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E39650881ACC0A1C0090BCDF /* Imp/click tracking */ = {
+			isa = PBXGroup;
+			children = (
+				E39650891ACC0A2E0090BCDF /* IMAdOperation.h */,
+				E396508A1ACC0A2E0090BCDF /* IMAdOperation.m */,
+				E396508B1ACC0A2E0090BCDF /* IMConstants.h */,
+				E396508C1ACC0A2E0090BCDF /* IMNativeAdData.h */,
+				E396508D1ACC0A2E0090BCDF /* IMNativeAdData.m */,
+				E396508E1ACC0A2E0090BCDF /* IMNativeQueue.h */,
+				E396508F1ACC0A2E0090BCDF /* IMNativeQueue.m */,
+			);
+			name = "Imp/click tracking";
+			sourceTree = "<group>";
+		};
+		E3EC5E1B1AB7103900FDF782 = {
+			isa = PBXGroup;
+			children = (
+				E3EC5E261AB7103900FDF782 /* InMobiAPIMonetization-Sample */,
+				E3EC5E401AB7103A00FDF782 /* InMobiAPIMonetization-SampleTests */,
+				E3EC5E251AB7103900FDF782 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E3EC5E251AB7103900FDF782 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E3EC5E241AB7103900FDF782 /* InMobiAPIMonetization-Sample.app */,
+				E3EC5E3D1AB7103A00FDF782 /* InMobiAPIMonetization-SampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E3EC5E261AB7103900FDF782 /* InMobiAPIMonetization-Sample */ = {
+			isa = PBXGroup;
+			children = (
+				E3EC5E871AB72E8200FDF782 /* InMobi classes */,
+				E3EC5E701AB711E000FDF782 /* BannerView.h */,
+				E3EC5E711AB711E000FDF782 /* BannerView.m */,
+				E3EC5E2B1AB7103A00FDF782 /* AppDelegate.h */,
+				E3EC5E2C1AB7103A00FDF782 /* AppDelegate.m */,
+				E3EC5E2E1AB7103A00FDF782 /* ViewController.h */,
+				E3EC5E2F1AB7103A00FDF782 /* ViewController.m */,
+				E3EC5E311AB7103A00FDF782 /* Main.storyboard */,
+				E3EC5E341AB7103A00FDF782 /* Images.xcassets */,
+				E3EC5E361AB7103A00FDF782 /* LaunchScreen.xib */,
+				E3EC5E271AB7103900FDF782 /* Supporting Files */,
+			);
+			path = "InMobiAPIMonetization-Sample";
+			sourceTree = "<group>";
+		};
+		E3EC5E271AB7103900FDF782 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3EC5E281AB7103A00FDF782 /* Info.plist */,
+				E3EC5E291AB7103A00FDF782 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E3EC5E401AB7103A00FDF782 /* InMobiAPIMonetization-SampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				E3EC5E431AB7103A00FDF782 /* IM_NetworkTest.m */,
+				E3B718251ABAFAF9002F63BF /* IM_AdsTest.m */,
+				E3B718261ABAFAF9002F63BF /* IM_RequestTest.m */,
+				E3B718271ABAFAF9002F63BF /* IM_ResponseTest.m */,
+				E3B718281ABAFAF9002F63BF /* IM_UtilTest.m */,
+				E3EC5E411AB7103A00FDF782 /* Supporting Files */,
+			);
+			path = "InMobiAPIMonetization-SampleTests";
+			sourceTree = "<group>";
+		};
+		E3EC5E411AB7103A00FDF782 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3EC5E421AB7103A00FDF782 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E3EC5E871AB72E8200FDF782 /* InMobi classes */ = {
+			isa = PBXGroup;
+			children = (
+				E39650881ACC0A1C0090BCDF /* Imp/click tracking */,
+				E3EC5E921AB72EFD00FDF782 /* api */,
+				E3EC5E881AB72EE800FDF782 /* ads */,
+			);
+			name = "InMobi classes";
+			sourceTree = "<group>";
+		};
+		E3EC5E881AB72EE800FDF782 /* ads */ = {
+			isa = PBXGroup;
+			children = (
+				E3EC5EB31AB742EE00FDF782 /* IMAdFormat.h */,
+				E3EC5EB41AB742EE00FDF782 /* IMAdFormat.m */,
+				E3EC5E891AB72EF500FDF782 /* IMBanner.h */,
+				E3EC5E8A1AB72EF500FDF782 /* IMBanner.m */,
+				E3EC5E8B1AB72EF500FDF782 /* IMInterstitial.h */,
+				E3EC5E8C1AB72EF500FDF782 /* IMInterstitial.m */,
+				E3EC5E8D1AB72EF500FDF782 /* IMNative.h */,
+				E3EC5E8E1AB72EF500FDF782 /* IMNative.m */,
+			);
+			name = ads;
+			sourceTree = "<group>";
+		};
+		E3EC5E921AB72EFD00FDF782 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				E3EC5E961AB72F1600FDF782 /* utils */,
+				E3EC5E951AB72F0F00FDF782 /* response */,
+				E3EC5E941AB72F0900FDF782 /* request */,
+				E3EC5E931AB72F0400FDF782 /* net */,
+			);
+			name = api;
+			sourceTree = "<group>";
+		};
+		E3EC5E931AB72F0400FDF782 /* net */ = {
+			isa = PBXGroup;
+			children = (
+				E3EC5E9D1AB72F3300FDF782 /* IMRequestResponseManager.h */,
+				E3EC5E9E1AB72F3300FDF782 /* IMRequestResponseManager.m */,
+				E3EC5EB61AB747C200FDF782 /* IMError.h */,
+				E3EC5EB71AB747C200FDF782 /* IMError.m */,
+			);
+			name = net;
+			sourceTree = "<group>";
+		};
+		E3EC5E941AB72F0900FDF782 /* request */ = {
+			isa = PBXGroup;
+			children = (
+				E3EC5E971AB72F2A00FDF782 /* IMRequest.h */,
+				E3EC5E981AB72F2A00FDF782 /* IMRequest.m */,
+				E3EC5E991AB72F2A00FDF782 /* IMRequestStubs.h */,
+				E3EC5E9A1AB72F2A00FDF782 /* IMRequestStubs.m */,
+				E3EC5EA31AB7339100FDF782 /* IMJSONPayloadCreator.h */,
+				E3EC5EA41AB7339100FDF782 /* IMJSONPayloadCreator.m */,
+			);
+			name = request;
+			sourceTree = "<group>";
+		};
+		E3EC5E951AB72F0F00FDF782 /* response */ = {
+			isa = PBXGroup;
+			children = (
+				E3EC5EA91AB73B1000FDF782 /* IMResponseStubs.h */,
+				E3EC5EAA1AB73B1000FDF782 /* IMResponseStubs.m */,
+				E3EC5EAD1AB73D7200FDF782 /* IMBannerResponseParser.h */,
+				E3EC5EAE1AB73D7200FDF782 /* IMBannerResponseParser.m */,
+				E3EC5EB01AB73D8100FDF782 /* IMNativeResponseParser.h */,
+				E3EC5EB11AB73D8100FDF782 /* IMNativeResponseParser.m */,
+			);
+			name = response;
+			sourceTree = "<group>";
+		};
+		E3EC5E961AB72F1600FDF782 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				E3EC5EA01AB72F3D00FDF782 /* GTMBase64Private.h */,
+				E3EC5EA11AB72F3D00FDF782 /* GTMBase64Private.m */,
+				E3EC5EA61AB7397600FDF782 /* IMUtils.h */,
+				E3EC5EA71AB7397600FDF782 /* IMUtils.m */,
+				E3EC5EAC1AB73B6200FDF782 /* IMValidator.h */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E3EC5E231AB7103900FDF782 /* InMobiAPIMonetization-Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3EC5E471AB7103A00FDF782 /* Build configuration list for PBXNativeTarget "InMobiAPIMonetization-Sample" */;
+			buildPhases = (
+				E3EC5E201AB7103900FDF782 /* Sources */,
+				E3EC5E211AB7103900FDF782 /* Frameworks */,
+				E3EC5E221AB7103900FDF782 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "InMobiAPIMonetization-Sample";
+			productName = "InMobiAPIMonetization-Sample";
+			productReference = E3EC5E241AB7103900FDF782 /* InMobiAPIMonetization-Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E3EC5E3C1AB7103A00FDF782 /* InMobiAPIMonetization-SampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3EC5E4A1AB7103A00FDF782 /* Build configuration list for PBXNativeTarget "InMobiAPIMonetization-SampleTests" */;
+			buildPhases = (
+				E3EC5E391AB7103A00FDF782 /* Sources */,
+				E3EC5E3A1AB7103A00FDF782 /* Frameworks */,
+				E3EC5E3B1AB7103A00FDF782 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3EC5E3F1AB7103A00FDF782 /* PBXTargetDependency */,
+			);
+			name = "InMobiAPIMonetization-SampleTests";
+			productName = "InMobiAPIMonetization-SampleTests";
+			productReference = E3EC5E3D1AB7103A00FDF782 /* InMobiAPIMonetization-SampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E3EC5E1C1AB7103900FDF782 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = InMobi;
+				TargetAttributes = {
+					E3EC5E231AB7103900FDF782 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					E3EC5E3C1AB7103A00FDF782 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = E3EC5E231AB7103900FDF782;
+					};
+				};
+			};
+			buildConfigurationList = E3EC5E1F1AB7103900FDF782 /* Build configuration list for PBXProject "InMobiAPIMonetization-Sample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E3EC5E1B1AB7103900FDF782;
+			productRefGroup = E3EC5E251AB7103900FDF782 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E3EC5E231AB7103900FDF782 /* InMobiAPIMonetization-Sample */,
+				E3EC5E3C1AB7103A00FDF782 /* InMobiAPIMonetization-SampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E3EC5E221AB7103900FDF782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3EC5E331AB7103A00FDF782 /* Main.storyboard in Resources */,
+				E3EC5E381AB7103A00FDF782 /* LaunchScreen.xib in Resources */,
+				E3EC5E351AB7103A00FDF782 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3EC5E3B1AB7103A00FDF782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E3EC5E201AB7103900FDF782 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3EC5E9F1AB72F3300FDF782 /* IMRequestResponseManager.m in Sources */,
+				E3EC5E911AB72EF500FDF782 /* IMNative.m in Sources */,
+				E3EC5EAB1AB73B1000FDF782 /* IMResponseStubs.m in Sources */,
+				E39650911ACC0A2E0090BCDF /* IMNativeAdData.m in Sources */,
+				E3EC5EA81AB7397600FDF782 /* IMUtils.m in Sources */,
+				E3EC5EB81AB747C200FDF782 /* IMError.m in Sources */,
+				E3EC5E7D1AB711E000FDF782 /* BannerView.m in Sources */,
+				E3EC5E8F1AB72EF500FDF782 /* IMBanner.m in Sources */,
+				E3EC5E301AB7103A00FDF782 /* ViewController.m in Sources */,
+				E3EC5E9C1AB72F2A00FDF782 /* IMRequestStubs.m in Sources */,
+				E3EC5E2D1AB7103A00FDF782 /* AppDelegate.m in Sources */,
+				E39650921ACC0A2E0090BCDF /* IMNativeQueue.m in Sources */,
+				E3EC5E9B1AB72F2A00FDF782 /* IMRequest.m in Sources */,
+				E3EC5EA21AB72F3D00FDF782 /* GTMBase64Private.m in Sources */,
+				E3EC5EAF1AB73D7200FDF782 /* IMBannerResponseParser.m in Sources */,
+				E3EC5EB51AB742EE00FDF782 /* IMAdFormat.m in Sources */,
+				E3EC5EB21AB73D8100FDF782 /* IMNativeResponseParser.m in Sources */,
+				E3EC5E901AB72EF500FDF782 /* IMInterstitial.m in Sources */,
+				E39650901ACC0A2E0090BCDF /* IMAdOperation.m in Sources */,
+				E3EC5E2A1AB7103A00FDF782 /* main.m in Sources */,
+				E3EC5EA51AB7339100FDF782 /* IMJSONPayloadCreator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3EC5E391AB7103A00FDF782 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3B7182B1ABAFAF9002F63BF /* IM_ResponseTest.m in Sources */,
+				E3B718291ABAFAF9002F63BF /* IM_AdsTest.m in Sources */,
+				E3EC5E441AB7103A00FDF782 /* IM_NetworkTest.m in Sources */,
+				E3B7182C1ABAFAF9002F63BF /* IM_UtilTest.m in Sources */,
+				E3B7182A1ABAFAF9002F63BF /* IM_RequestTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E3EC5E3F1AB7103A00FDF782 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3EC5E231AB7103900FDF782 /* InMobiAPIMonetization-Sample */;
+			targetProxy = E3EC5E3E1AB7103A00FDF782 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E3EC5E311AB7103A00FDF782 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3EC5E321AB7103A00FDF782 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E3EC5E361AB7103A00FDF782 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3EC5E371AB7103A00FDF782 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E3EC5E451AB7103A00FDF782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E3EC5E461AB7103A00FDF782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E3EC5E481AB7103A00FDF782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "InMobiAPIMonetization-Sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E3EC5E491AB7103A00FDF782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "InMobiAPIMonetization-Sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E3EC5E4B1AB7103A00FDF782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "InMobiAPIMonetization-SampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InMobiAPIMonetization-Sample.app/InMobiAPIMonetization-Sample";
+			};
+			name = Debug;
+		};
+		E3EC5E4C1AB7103A00FDF782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "InMobiAPIMonetization-SampleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InMobiAPIMonetization-Sample.app/InMobiAPIMonetization-Sample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E3EC5E1F1AB7103900FDF782 /* Build configuration list for PBXProject "InMobiAPIMonetization-Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3EC5E451AB7103A00FDF782 /* Debug */,
+				E3EC5E461AB7103A00FDF782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3EC5E471AB7103A00FDF782 /* Build configuration list for PBXNativeTarget "InMobiAPIMonetization-Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3EC5E481AB7103A00FDF782 /* Debug */,
+				E3EC5E491AB7103A00FDF782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3EC5E4A1AB7103A00FDF782 /* Build configuration list for PBXNativeTarget "InMobiAPIMonetization-SampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3EC5E4B1AB7103A00FDF782 /* Debug */,
+				E3EC5E4C1AB7103A00FDF782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E3EC5E1C1AB7103900FDF782 /* Project object */;
+}

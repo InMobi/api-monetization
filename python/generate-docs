@@ -1,0 +1,5 @@
+rm source/api*
+rm source/monetization*
+rm source/modules*
+sphinx-apidoc -o source/ inmobi/
+make html
