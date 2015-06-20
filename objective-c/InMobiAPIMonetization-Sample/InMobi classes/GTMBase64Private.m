@@ -1,5 +1,5 @@
 //
-//  IMGTMBase64Private.m
+//  GTMBase64Private.m
 //
 //  Copyright 2006-2008 Google Inc.
 //

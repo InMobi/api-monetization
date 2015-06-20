@@ -21,7 +21,6 @@
 		E3EC5E351AB7103A00FDF782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3EC5E341AB7103A00FDF782 /* Images.xcassets */; };
 		E3EC5E381AB7103A00FDF782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3EC5E361AB7103A00FDF782 /* LaunchScreen.xib */; };
 		E3EC5E441AB7103A00FDF782 /* IM_NetworkTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5E431AB7103A00FDF782 /* IM_NetworkTest.m */; };
-		E3EC5E7D1AB711E000FDF782 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5E711AB711E000FDF782 /* BannerView.m */; };
 		E3EC5E8F1AB72EF500FDF782 /* IMBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5E8A1AB72EF500FDF782 /* IMBanner.m */; };
 		E3EC5E901AB72EF500FDF782 /* IMInterstitial.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5E8C1AB72EF500FDF782 /* IMInterstitial.m */; };
 		E3EC5E911AB72EF500FDF782 /* IMNative.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EC5E8E1AB72EF500FDF782 /* IMNative.m */; };
@@ -73,8 +72,6 @@
 		E3EC5E3D1AB7103A00FDF782 /* InMobiAPIMonetization-SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InMobiAPIMonetization-SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3EC5E421AB7103A00FDF782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3EC5E431AB7103A00FDF782 /* IM_NetworkTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IM_NetworkTest.m; sourceTree = "<group>"; };
-		E3EC5E701AB711E000FDF782 /* BannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BannerView.h; path = "InMobi classes/BannerView.h"; sourceTree = "<group>"; };
-		E3EC5E711AB711E000FDF782 /* BannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BannerView.m; path = "InMobi classes/BannerView.m"; sourceTree = "<group>"; };
 		E3EC5E891AB72EF500FDF782 /* IMBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMBanner.h; path = "InMobi classes/IMBanner.h"; sourceTree = "<group>"; };
 		E3EC5E8A1AB72EF500FDF782 /* IMBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMBanner.m; path = "InMobi classes/IMBanner.m"; sourceTree = "<group>"; };
 		E3EC5E8B1AB72EF500FDF782 /* IMInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMInterstitial.h; path = "InMobi classes/IMInterstitial.h"; sourceTree = "<group>"; };
@@ -160,8 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				E3EC5E871AB72E8200FDF782 /* InMobi classes */,
-				E3EC5E701AB711E000FDF782 /* BannerView.h */,
-				E3EC5E711AB711E000FDF782 /* BannerView.m */,
 				E3EC5E2B1AB7103A00FDF782 /* AppDelegate.h */,
 				E3EC5E2C1AB7103A00FDF782 /* AppDelegate.m */,
 				E3EC5E2E1AB7103A00FDF782 /* ViewController.h */,
@@ -395,7 +390,6 @@
 				E39650911ACC0A2E0090BCDF /* IMNativeAdData.m in Sources */,
 				E3EC5EA81AB7397600FDF782 /* IMUtils.m in Sources */,
 				E3EC5EB81AB747C200FDF782 /* IMError.m in Sources */,
-				E3EC5E7D1AB711E000FDF782 /* BannerView.m in Sources */,
 				E3EC5E8F1AB72EF500FDF782 /* IMBanner.m in Sources */,
 				E3EC5E301AB7103A00FDF782 /* ViewController.m in Sources */,
 				E3EC5E9C1AB72F2A00FDF782 /* IMRequestStubs.m in Sources */,
