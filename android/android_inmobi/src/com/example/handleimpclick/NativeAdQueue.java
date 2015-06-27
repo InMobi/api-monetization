@@ -7,17 +7,16 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.example.handleimpclick.NativeAdData.AdOperationType;
+import com.example.handleimpclick.NativeAdExecutor.NativeAdExecutorListener;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.inmobi.nativeadsample.handleimpclick.NativeAdData.AdOperationType;
-import com.inmobi.nativeadsample.handleimpclick.NativeAdExecutor.NativeAdExecutorListener;
 
 /**
  * This is the main external facing class, to be used to track impression
@@ -202,14 +201,24 @@ public class NativeAdQueue implements NativeAdExecutorListener {
 		updateCachedAdData(executor, success);
 		NativeAdExecutor notExecuting = null;
 		for (NativeAdExecutor e : currentExecutingItems) {
-			if (e.webViewWrapper == null || !e.webViewWrapper.isExecuting) {
+			if (e.webViewWrapper == null) {
+				//Log.v(InternalUtils.IM_TAG, "ns was not executing as webview was null, will get added to queue:" + e.data.ns);
 				notExecuting = e;
 				break;
+			} 
+//			else if(!e.webViewWrapper.isExecuting) {
+//				//Log.v(InternalUtils.IM_TAG, "ns was not executing, will get added to queue:" + e.data.ns);
+//				notExecuting = e;
+//				break;
+//			}
+			else {
+				//Log.v(InternalUtils.IM_TAG, "ns has finished executing, will get removed:" + e.data.ns);
 			}
 		}
 		if (notExecuting != null) {
 			notExecuting.webViewWrapper = webViewWrapperList
 					.get(executor.webViewWrapper.index);
+			//Log.v(InternalUtils.IM_TAG, "will get executed:" + notExecuting.data.ns);
 			executorService.execute(notExecuting);
 		}
 		
@@ -219,7 +228,7 @@ public class NativeAdQueue implements NativeAdExecutorListener {
 	private synchronized void recordEventInternal(NativeAdData data,
 			AdOperationType operationType) {
 		if (isDuplicateOperation(data, operationType)) {
-			Log.v(InternalUtils.IM_TAG, "returning:" + data.ns);
+			//Log.v(InternalUtils.IM_TAG, "returning:" + data.ns);
 			return;
 		}
 		WebViewWrapper wrapper = null;
@@ -234,7 +243,10 @@ public class NativeAdQueue implements NativeAdExecutorListener {
 		// check for dependency
 		currentExecutingItems.add(executable);
 		if(wrapper != null) {
+			//Log.v(InternalUtils.IM_TAG,"ns will execute:" + executable.data.ns);
 			executorService.execute(executable);
+		} else {
+			//Log.v(InternalUtils.IM_TAG,"ns waiting:" + executable.data.ns);
 		}
 		
 	}
@@ -296,6 +308,7 @@ public class NativeAdQueue implements NativeAdExecutorListener {
 	 */
 	public void executionSuccedeed(NativeAdExecutor e) {
 		// TODO Auto-generated method stub
+		//Log.v(InternalUtils.IM_TAG,"execution finished:" + e.data.ns);
 		checkAndReAssignWebViewForCompletedExecution(e, true);
 	}
 

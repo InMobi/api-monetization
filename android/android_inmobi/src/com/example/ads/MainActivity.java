@@ -23,6 +23,7 @@ import main.java.com.inmobi.monetization.api.response.ad.BannerResponse;
 import main.java.com.inmobi.monetization.api.response.ad.NativeResponse;
 
 import com.example.ads.R;
+import com.example.handleimpclick.NativeAdQueue;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -33,7 +34,7 @@ public class MainActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+		NativeAdQueue.sharedQueue().initialize(this);
 		Request request = new Request();
 		//property 
 		Property property = null;
@@ -58,14 +59,16 @@ public class MainActivity extends Activity {
 		final Banner banner = new Banner();
 		final Request r = request;
 		final Interstitial interstitial = new Interstitial();
+		final Activity a = this;
 		(new Thread(){
 			public void run() {
 				//ArrayList<BannerResponse> ads1 = interstitial.loadRequest(r);
 				ArrayList<NativeResponse> ads1 = nativeAd.loadRequest(r);
-				for(NativeResponse br : ads1) {
-					Log.d("","action name:" + br.contextCode);
-					Log.d("","action type:" + br.pubContent);
+				for(final NativeResponse br : ads1) {
+					//Log.d("","action name:" + br.contextCode);
+					//Log.d("","action type:" + br.pubContent);
 					Log.d("","action cdata:" + br.ns);
+					NativeAdQueue.recordImpression(br.ns, br.contextCode, null);
 				}
 				
 			}

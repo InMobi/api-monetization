@@ -28,12 +28,12 @@ public class Launch {
 		Request request = new Request();
 		//property 
 		Property property = null;
-		property = new Property("YOUR_PROPERTY_ID");
+		property = new Property("a018bf6f196047e39c10b94e373fa3c1");
 		request.setProperty(property);
 		
 		//device 
-		Device device = new Device("CARRIER_IP",
-				"MOBILE UA");
+		Device device = new Device("87.84.221.50",
+				"Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12B411");
 		request.setDevice(device);
 		
 		//impression 
@@ -50,7 +50,7 @@ public class Launch {
 		Banner banner = new Banner();
 		
 		Interstitial interstitial = new Interstitial();
-		ArrayList<BannerResponse> ads1 = banner.loadRequest(request);
+		ArrayList<BannerResponse> ads1 = interstitial.loadRequest(request);
 		for(BannerResponse b : ads1) {
 			//b.ad
 		}

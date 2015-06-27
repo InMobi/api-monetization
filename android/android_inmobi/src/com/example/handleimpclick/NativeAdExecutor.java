@@ -50,7 +50,7 @@ public class NativeAdExecutor implements Runnable {
 			public void run() {
 				// TODO Auto-generated method stub
 				setupWebViewListener();
-				Log.v(InternalUtils.IM_TAG, "loading js:" + js);
+				//Log.v(InternalUtils.IM_TAG, "loading js:" + data.ns);
 		        webViewWrapper.webView.loadData(js, "text/html", "UTF-8");
 		    } 
 				
@@ -69,7 +69,7 @@ public class NativeAdExecutor implements Runnable {
 	@Override
 	public void run() {
 		
-		Log.v(InternalUtils.IM_TAG, " started" );
+		//Log.v(InternalUtils.IM_TAG, " started, operation=" + operationType + "imp status:" + data.isImpressionCountingFinished );
 		isRequestInProgress = true;
 		
 		
@@ -93,6 +93,9 @@ public class NativeAdExecutor implements Runnable {
         if (validOperation) {
             //execute on main thread..
             fireJS();
+        } else {
+        	sendSuccessCallback();
+        	isRequestInProgress = false;
         }
 		try {
 			while(isRequestInProgress == true) {
@@ -102,9 +105,8 @@ public class NativeAdExecutor implements Runnable {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		Log.v(InternalUtils.IM_TAG, " completed");
+		//Log.v(InternalUtils.IM_TAG, "current executor has completed:" + data.ns);
 		
-		//sendSuccessCallback();
 	}
 	
 	private void setupWebViewListener() {
@@ -123,19 +125,19 @@ public class NativeAdExecutor implements Runnable {
 				{
 					webViewWrapper.isExecuting = false;
 				}
+				//Log.v(InternalUtils.IM_TAG,"page finished:" + data.ns);
 				sendSuccessCallback();
-				Log.v(InternalUtils.IM_TAG,"page finished:" + data.ns);
+				
             }
 			public void onPageStarted (WebView view, String url, Bitmap favicon) {
-				Log.v(InternalUtils.IM_TAG,"page started:");
+				//Log.v(InternalUtils.IM_TAG,"page started:" + data.ns);
 			}
 			
 			public void onLoadResource (WebView view, String url) {
-				Log.v(InternalUtils.IM_TAG,"resource load:");
+				//Log.v(InternalUtils.IM_TAG,"resource load:" + data.ns);
 			}
 			public void onReceivedError (WebView view, int errorCode, String description, String failingUrl) {
-				Log.v(InternalUtils.IM_TAG,"received error:" + errorCode + "\tdesc:" + description
-						+ "\n" + failingUrl);
+				//Log.v(InternalUtils.IM_TAG,"received error:" + errorCode + "\tdesc:" + description+ "\n" + failingUrl);
 				//handle failure cases
 				isRequestInProgress = false;
 				if (webViewWrapper != null)

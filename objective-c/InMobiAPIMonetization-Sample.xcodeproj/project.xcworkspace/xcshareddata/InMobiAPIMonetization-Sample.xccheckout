@@ -7,22 +7,18 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>0A6CB9E7-D7F1-4A4A-A2ED-A4F1EB869281</string>
 	<key>IDESourceControlProjectName</key>
-	<string>InMobiAPIMonetization-Sample</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>8E7C8B8994D0F9C2703EC3F4A5AA1AC392F9F543</key>
 		<string>https://github.com/InMobi/api-monetization.git</string>
-		<key>99A12C88C9EBCA429B08D78AA2312AE66AC38724</key>
-		<string>https://github.corp.inmobi.com/pso-supply/api-monetisation.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>objective-c/InMobiAPIMonetization-Sample.xcodeproj</string>
+	<string>objective-c/InMobiAPIMonetization-Sample.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>8E7C8B8994D0F9C2703EC3F4A5AA1AC392F9F543</key>
 		<string>../../..</string>
-		<key>99A12C88C9EBCA429B08D78AA2312AE66AC38724</key>
-		<string>../../../../api-monetisation</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/InMobi/api-monetization.git</string>
@@ -32,14 +28,6 @@
 	<string>8E7C8B8994D0F9C2703EC3F4A5AA1AC392F9F543</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>99A12C88C9EBCA429B08D78AA2312AE66AC38724</string>
-			<key>IDESourceControlWCCName</key>
-			<string>api-monetisation</string>
-		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

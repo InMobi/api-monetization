@@ -105,7 +105,7 @@ public class RequestResponseManager {
 		if (obj != null) {
 			try {
 				String postBody = obj.toString();
-				Log.d("",postBody);
+				//Log.d("",postBody);
 				URL serverUrl = new URL(INMOBI_API_2_0_URL);
 				HttpURLConnection connection = (HttpURLConnection) serverUrl
 						.openConnection();
