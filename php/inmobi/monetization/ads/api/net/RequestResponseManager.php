@@ -67,7 +67,7 @@ class RequestResponseManager {
 			$ch = curl_init();
 
 			//set the url, number of POST vars, POST data
-			curl_setopt($ch,CURLOPT_URL,"http://api.w.inmobi.com/showad/v2");
+			curl_setopt($ch,CURLOPT_URL,"http://api.w.inmobi.com/showad/v2.1");
 			//curl_setopt($ch,CURLOPT_POST, 1);
 			curl_setopt($ch,CURLOPT_POSTFIELDS, $requestJson);
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

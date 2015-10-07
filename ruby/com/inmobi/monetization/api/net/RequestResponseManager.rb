@@ -121,7 +121,7 @@ class RequestResponseManager
 		@errorCode = nil
 	end
 
-	AD_SERVER_URL = "http://api.w.inmobi.com/showad/v2"
+	AD_SERVER_URL = "http://api.w.inmobi.com/showad/v2.1"
 
 	public
 	def fetchResponse(requestJson,userAgent,carrierIP)

@@ -27,9 +27,6 @@ API Structure
 -------------
 With these classes you can build the following Object representation.
 
-.. image:: https://www.inmobi.com/support/files/2013/09/jsonrep.png
-.. _InMobi S2S 2.0 API integration document:
-   https://www.inmobi.com/support/art/26555436/22465648/api-2-0-integration-guidelines/
 
 Data Classes
 ------------

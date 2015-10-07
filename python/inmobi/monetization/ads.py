@@ -92,7 +92,7 @@ class ResponseError(object):
 
 
 class InMobiS2SClient(object):
-    END_POINT = "http://api.w.inmobi.com/showad/v2"
+    END_POINT = "http://api.w.inmobi.com/showad/v2.1"
 
     @staticmethod
     def loadad(request):

@@ -178,7 +178,7 @@ RequestResponseManager.prototype.fetchResponse = function(requestJson,useragent,
   	}
   	console.log("here:" + requestJson)
 	request({
-	    url: "http://api.w.inmobi.com/showad/v2",
+	    url: "http://api.w.inmobi.com/showad/v2.1",
 	    method: "POST",
 	    headers: {
 	        "content-type": "application/json", 

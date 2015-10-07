@@ -44,7 +44,7 @@ import com.google.gson.JsonObject;
 public class RequestResponseManager {
 
 	private ErrorCode errorCode = null;
-	private static final String INMOBI_API_2_0_URL = "http://api.w.inmobi.com/showad/v2";
+	private static final String INMOBI_API_2_0_URL = "http://api.w.inmobi.com/showad/v2.1";
 	private boolean isRequestInProgress;
 
 	/**

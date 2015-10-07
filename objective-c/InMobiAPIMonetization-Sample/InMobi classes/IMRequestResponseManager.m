@@ -30,7 +30,7 @@
 #import "GTMBase64Private.h"
 @implementation IMRequestResponseManager
 
-#define IM_AD_SERVER_URL @"http://api.w.inmobi.com/showad/v2"
+#define IM_AD_SERVER_URL @"http://api.w.inmobi.com/showad/v2.1"
 
 //- (void)sendSuccessCallback:(NSData *)rootObject successBlock:(void (^)(id rootObj))success {
 //    if (success != nil) {
