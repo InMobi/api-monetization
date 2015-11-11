@@ -1,5 +1,9 @@
 package main.java.com.inmobi.monetization.api.net;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+
 import main.java.com.inmobi.monetization.api.request.ad.Data;
 import main.java.com.inmobi.monetization.api.request.ad.Device;
 import main.java.com.inmobi.monetization.api.request.ad.Geo;
@@ -14,25 +18,21 @@ import main.java.com.inmobi.monetization.api.request.enums.Gender;
 import main.java.com.inmobi.monetization.api.utils.InternalUtil;
 import main.java.com.inmobi.monetization.api.utils.LogLevel;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 
 
 public class JSONPayloadCreator {
 
 	/**
-	 * This method constructs a JSONObject, depending on the request parameters passed.
+	 * This method constructs a JsonObject, depending on the request parameters passed.
 	 * @note The request object needs to have valid arguments, depending on the AdRequestType
 	 * You should check if the request.isValid() returns true, as this method internally
 	 * validates the request & proceeds if & only the request object is valid for the AdRequestType.
 	 * @param request The request object, for which a JSON would be constructed
 	 * @param type The request type, one of Banner, Interstitial or Native ads
-	 * @return JSONObject which is used as POST Body in the InMobi API 2.0 Ad Request. 
+	 * @return JsonObject which is used as POST Body in the InMobi API 2.0 Ad Request. 
 	 * TODO User demography as part of JSON API request.
 	 */
-	public static JSONObject generateInMobiAdRequestPayload(Request request) {
+	public static JsonObject generateInMobiAdRequestPayload(Request request) {
 
 		if (request == null) {
 			InternalUtil.Log("Request object cannot be null",LogLevel.ERROR);
@@ -42,159 +42,165 @@ public class JSONPayloadCreator {
 			InternalUtil.Log("Please provide valid parameters in the request object",LogLevel.ERROR);
 			return null;
 		}
-		JSONObject mainObject = new JSONObject();
+		JsonObject mainObject = new JsonObject();
 		// request format
 		try {
 			if (request.getRequestType() != AdRequest.NATIVE) {
 				
-				mainObject.put("responseformat", "axml");
+				mainObject.addProperty("responseformat", "axml");
 			} else {
-				mainObject.put("responseformat", "native");
+				mainObject.addProperty("responseformat", "native");
 			}
 
 			// site format
 
-			JSONObject propertyObject = getPropertyJSON(request.getProperty());
+			JsonObject propertyObject = getPropertyJSON(request.getProperty());
 			if (propertyObject != null) {
 				
-				mainObject.put("site", propertyObject);
+				mainObject.add("site", propertyObject);
 			}
 
-			JSONArray impArray = getImpressionJSON(request.getImpression(), request.getRequestType());
+			JsonArray impArray = getImpressionJSON(request.getImpression(), request.getRequestType());
 			if(impArray != null) {
-				mainObject.put("imp", impArray);
+				mainObject.add("imp", impArray);
 			}
 			
-			JSONObject userObject = getUserJSON(request.getUser());
+			JsonObject userObject = getUserJSON(request.getUser());
 			if(userObject != null) {
-				mainObject.put("user", userObject);
+				mainObject.add("user", userObject);
 			}
 			
-			JSONObject deviceObject = getDeviceJSON(request.getDevice());
+			JsonObject deviceObject = getDeviceJSON(request.getDevice());
 			if(deviceObject != null) {
-				mainObject.put("device", deviceObject);
+				mainObject.add("device", deviceObject);
 			}
-		} catch(JSONException e) {}
+		} catch(JsonParseException e) {}
+		  
 
 		return mainObject;
 
 	}
 
-	private static JSONObject getPropertyJSON(Property property) throws JSONException {
-		JSONObject siteObject = null;
+	private static JsonObject getPropertyJSON(Property property)  throws JsonParseException {
+		JsonObject siteObject = null;
 		if (property != null) {
-			siteObject = new JSONObject();
+			siteObject = new JsonObject();
 			String propertyId = property.getPropertyId();
 			if (propertyId != null) {
-				siteObject.put("id", propertyId);
+				siteObject.addProperty("id", propertyId);
 			}
 
 		}
 		return siteObject;
 	}
 
-	private static JSONArray getImpressionJSON(Impression imp,
-			AdRequest type) throws JSONException {
-		JSONArray impArray = null;
+	private static JsonArray getImpressionJSON(Impression imp,
+			AdRequest type) throws JsonParseException {
+		JsonArray impArray = null;
 		if (imp != null) {
-			JSONObject impressionObject = new JSONObject();
+			JsonObject impressionObject = new JsonObject();
 
 			Slot banner = imp.getSlot();
 			if (type != AdRequest.NATIVE) {
-				JSONObject bannerObject = new JSONObject();
+				JsonObject bannerObject = new JsonObject();
 
 				String pos = banner.getPosition();
 				if (pos != null) {
-					bannerObject.put("pos", pos);
+					bannerObject.addProperty("pos", pos);
 				}
-				bannerObject.put("adsize", banner.getAdSize());
-				impressionObject.put("banner", bannerObject);
+				bannerObject.addProperty("adsize", banner.getAdSize());
+				impressionObject.add("banner", bannerObject);
 			}
 			// displaymanager/ver values have a default value, ads too has a
 			// default value.
-			impressionObject.put("ads", imp.getNoOfAds());
-			impressionObject.put("displaymanager",
+			impressionObject.addProperty("ads", imp.getNoOfAds());
+			impressionObject.addProperty("displaymanager",
 					imp.getDisplayManager());
-			impressionObject.put("displaymanagerver",
+			impressionObject.addProperty("displaymanagerver",
 					imp.getDisplayManagerVersion());
 
 			// adtype=int, for interstitial ads.
 			if (type == AdRequest.INTERSTITIAL) {
-				impressionObject.put("adtype", "int");
+				impressionObject.addProperty("adtype", "int");
 			}
 			// impression object is an array
-			impArray = new JSONArray();
-			impArray.put(impressionObject);
+			impArray = new JsonArray();
+			impArray.add(impressionObject);
 
 		}
 		return impArray;
 	}
 	
-	private static JSONObject getDeviceJSON(Device device) throws JSONException {
-		JSONObject deviceObject = null;
+	private static JsonObject getDeviceJSON(Device device) throws JsonParseException {
+		JsonObject deviceObject = null;
 		if(device != null) {
-			deviceObject = new JSONObject();
+			deviceObject = new JsonObject();
 			if (device != null) {
 				String ip = device.getCarrierIP();
 				if (ip != null) {
-					deviceObject.put("ip", ip);
+					deviceObject.addProperty("ip", ip);
 				}
 				String ua = device.getUserAgent();
 				if (ua != null) {
-					deviceObject.put("ua", ua);
+					deviceObject.addProperty("ua", ua);
 				}
 				//for Android sites..
 				String gpid = device.getGpId();
 				if (gpid != null) {
-					deviceObject.put("gpid", gpid);
+					deviceObject.addProperty("gpid", gpid);
+				}
+				//for iOS sites..
+				String ida = device.getIda();
+				if(ida != null) {
+					deviceObject.addProperty("ida", ida);
 				}
 			}
 
 			Geo geo = device.getGeo();
 			if (geo != null && geo.isValid()) {
-				JSONObject geoObject = new JSONObject();
-				geoObject.put("lat", geo.getLatitude());
-				geoObject.put("lon", geo.getLongitude());
-				geoObject.put("accu", geo.getAccuracy());
-				deviceObject.put("geo", geoObject);
+				JsonObject geoObject = new JsonObject();
+				geoObject.addProperty("lat", geo.getLatitude());
+				geoObject.addProperty("lon", geo.getLongitude());
+				geoObject.addProperty("accu", geo.getAccuracy());
+				deviceObject.add("geo", geoObject);
 			}
 		}
 		return deviceObject;
 	}
 	
-	private static JSONObject getUserJSON(User user) throws JSONException{
-		JSONObject userObject = null;
+	private static JsonObject getUserJSON(User user) throws JsonParseException {
+		JsonObject userObject = null;
 		if(user != null) {
-			userObject = new JSONObject();
+			userObject = new JsonObject();
 			if (user.getYearOfBirth() > 0) {
-				userObject.put("yob", user.getYearOfBirth());
+				userObject.addProperty("yob", user.getYearOfBirth());
 			}
 			Gender gender = user.getGender();
 			if (gender != Gender.UNKNOWN) {
 				if (gender == Gender.MALE) {
-					userObject.put("gender", "M");
+					userObject.addProperty("gender", "M");
 				} else {
-					userObject.put("gender", "F");
+					userObject.addProperty("gender", "F");
 				}
 			}
-			JSONObject dataObject = new JSONObject();
+			JsonObject dataObject = new JsonObject();
 			Data data = user.getData();
 			if(data != null) {
 				String ID = data.getID();
 				if (ID != null) {
-					dataObject.put("id", ID);
+					dataObject.addProperty("id", ID);
 				}
 				String name = data.getName();
 				if (name != null) {
-					dataObject.put("name", name);
+					dataObject.addProperty("name", name);
 				}
 				UserSegment segmentObject = data.getUserSegment();
 				if (segmentObject != null) {
 					if (segmentObject.getUserSegmentArray() != null) {
-						// dataObject.put("segment",new JSONObject());
-						JSONArray dataArray = new JSONArray();
-						dataArray.put(dataObject);
-						userObject.put("data", dataArray);
+						// dataObject.addProperty("segment",new JsonObject());
+						JsonArray dataArray = new JsonArray();
+						dataArray.add(dataObject);
+						userObject.add("data", dataArray);
 					}
 				}
 			}

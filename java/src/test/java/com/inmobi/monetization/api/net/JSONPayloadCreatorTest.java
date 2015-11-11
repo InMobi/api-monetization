@@ -92,7 +92,7 @@ public class JSONPayloadCreatorTest {
 		payload = JSONPayloadCreator.generateInMobiAdRequestPayload(request);
 		assertNotNull(payload); //native doesn't require imp 
 		
-		request.setImpression(new Impression(-1,false,null,null,new Slot(10, null)));
+		request.setImpression(new Impression());
 		request.setRequestType(AdRequest.INTERSTITIAL);
 		payload = JSONPayloadCreator.generateInMobiAdRequestPayload(request);
 		assertNotNull(payload);

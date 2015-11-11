@@ -44,7 +44,7 @@ import com.google.gson.JsonObject;
 public class RequestResponseManager {
 
 	private ErrorCode errorCode = null;
-	private static final String INMOBI_API_2_0_URL = "http://api.w.inmobi.com/showad/v2.1";
+	private static final String INMOBI_API_2_1_URL = "http://api.w.inmobi.com/showad/v2.1";
 	private boolean isRequestInProgress;
 
 	/**
@@ -104,11 +104,13 @@ public class RequestResponseManager {
 		if (obj != null) {
 			try {
 				String postBody = obj.toString();
-				URL serverUrl = new URL(INMOBI_API_2_0_URL);
+				//System.out.println("postbody:" + postBody);
+				URL serverUrl = new URL(INMOBI_API_2_1_URL);
 				HttpURLConnection connection = (HttpURLConnection) serverUrl
 						.openConnection();
 				setConnectionParams(connection,request);
 				postData(connection, postBody);
+				//System.out.println("response:" + connection.getResponseCode());
 				if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
 					is = connection.getInputStream();
 				} else {
