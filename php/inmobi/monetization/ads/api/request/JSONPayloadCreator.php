@@ -150,6 +150,8 @@ class JSONPayloadCreator {
 	private static function getUserJson($user) {
 		//TODO Data object implementation
 		$userArray = array();
+		if($user == null || gettype($user) != "object") return $userArray;
+		
 		$yob = $user->yearOfBirth;
 		if(StubValidator::isIntegerValid($yob) && $yob > 0) {
 			$userArray['yob'] = $yob;
