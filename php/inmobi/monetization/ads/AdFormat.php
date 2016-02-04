@@ -78,7 +78,7 @@ abstract class AdFormat  {
 
     protected function checkAndSetError($adsArray) {
         if(gettype($adsArray) != "array") {// response object will always be an array
-                $this->errorCode = new ErrorCode(ErrorCode::INTERNAL_ERROR,INTERNAL_ERROR_MSG.gettype($adsArray));
+                $this->errorCode = new ErrorCode(ErrorCode::INTERNAL_ERROR,ErrorCode::INTERNAL_ERROR_MSG;
             } else if(sizeof($adsArray) == 0) {
                 $this->errorCode = new ErrorCode(ErrorCode::NO_FILL,ErrorCode::NO_FILLMSG);
             }
