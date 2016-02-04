@@ -57,7 +57,7 @@ class RequestResponseManager {
 	* @return String response, as obtained by the server.
 	*/
 	public function fetchResponse($requestJson,$userAgent,$carrierIP) {
-		if(_isCurl() == false) {
+		if($this->_isCurl() == false) {
 			echo "Curl is not supported.";
 			return null;
 		}
