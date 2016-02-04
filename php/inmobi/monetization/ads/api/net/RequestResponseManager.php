@@ -46,7 +46,7 @@ require_once(dirname(__FILE__)."/ErrorCode.php");
  */
 class RequestResponseManager {
 
-	function _isCurl(){
+	public function _isCurl(){
 	    return function_exists('curl_version');
 	}
 	public $errorCode;
