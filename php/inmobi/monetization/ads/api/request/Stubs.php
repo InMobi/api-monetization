@@ -88,7 +88,7 @@ class Impression {
     public $slot;
 
     function __construct($s) {
-        $slot = $s;
+        $this->slot = $s;
     }
     static function getImpressionObjectWithSlot($s) {
         $imp = new Impression();
@@ -202,13 +202,13 @@ class Device {
 
     function __construct($carrierIP,$userAgent) {
 
-        $carrierIP = $carrierIP;
-        $userAgent = $userAgent;
-        $gpId = null;
-        $androidId = null;
-        $idfa = null;
-        $geo = null;
-        $adTrackingDisabled = false;
+        $this->carrierIP = $carrierIP;
+        $this->$userAgent = $userAgent;
+        $this->gpId = null;
+        $this->androidId = null;
+        $this->$idfa = null;
+        $this->geo = null;
+        $this->adTrackingDisabled = false;
      } 
 
      /**
@@ -255,9 +255,9 @@ class Data {
     public $userSegment;
 
     function __construct() {
-        $ID = null;
-        $name = null;
-        $userSegment = null;
+        $this->ID = null;
+        $this->$name = null;
+        $this->userSegment = null;
      } 
 
      static function getDataWithParams($id,$n,$seg) {
@@ -298,9 +298,9 @@ class User {
     public $data;
 
     function __construct() {
-        $yearOfBirth = null;
-        $gender = null;
-        $data = null;
+        $this->yearOfBirth = null;
+        $this->gender = null;
+        $this->data = null;
      } 
      
      static function getUserWithParams($yob,$g,$d) {
